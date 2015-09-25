@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FEF5A293-C086-4804-BF6A-3524893647E2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XamarinFormsClasses</RootNamespace>
+    <AssemblyName>XamarinFormsClasses</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\BindableObject.cs" />
+    <Compile Include="Base\Element.cs" />
+    <Compile Include="Base\Layout.cs" />
+    <Compile Include="Base\Layouts\AbsoluteLayout.cs" />
+    <Compile Include="Base\Layouts\Grid.cs" />
+    <Compile Include="Base\Layouts\AbsoluteLayout_Extension.cs" />
+    <Compile Include="Base\Layouts\RelativeLayout.cs" />
+    <Compile Include="Base\Layouts\StackLayout.cs" />
+    <Compile Include="Base\View.cs" />
+    <Compile Include="Base\ViewExtension.cs" />
+    <Compile Include="Base\VisualElement.cs" />
+    <Compile Include="Base\VisualElementExtension.cs" />
+    <Compile Include="Converters\LambdaConverter.cs" />
+    <Compile Include="Converters\LayoutOptionsToVerticalAlignmentConverter.cs" />
+    <Compile Include="Converters\MultiBindingReturnFirstConverter.cs" />
+    <Compile Include="Converters\RotationToAngleInTransFormGroupConverter.cs" />
+    <Compile Include="Converters\LayoutOptionsToHorizontalAlignmentConverter.cs" />
+    <Compile Include="Extension\Placement\DefaultPlacementBehavior.cs" />
+    <Compile Include="Base\Views\Button.cs" />
+    <Compile Include="Base\Views\ButtonView.cs" />
+    <Compile Include="Base\Views\LabelView.cs" />
+    <Compile Include="Converters\FontSizeConveter.cs" />
+    <Compile Include="Converters\ColorToBrushConverter.cs" />
+    <Compile Include="Converters\YAlignToVerticalAlignmentConverter.cs" />
+    <Compile Include="Converters\XAlignToHorizontalAlignmentConverter.cs" />
+    <Compile Include="Converters\IsVisibleToVisibilityConverter.cs" />
+    <Compile Include="Enums\FontAttributes.cs" />
+    <Compile Include="Enums\FontSize.cs" />
+    <Compile Include="Enums\LayoutOptions.cs" />
+    <Compile Include="Enums\TextAlignment.cs" />
+    <Compile Include="Extension\ResizeThumbExtension.cs" />
+    <Compile Include="Extension\SelectedElementRectangleExtension.cs" />
+    <Compile Include="Pages\ContentPageView.xaml.cs">
+      <DependentUpon>ContentPageView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Page .cs" />
+    <Compile Include="Pages\ContentPage.cs" />
+    <Compile Include="Base\Views\Label.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Panels\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Pages\ContentPageView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\CSharp\private Projekte\github\clones\SharpDevelop\src\AddIns\DisplayBindings\WpfDesign\WpfDesign.Designer\Project\WpfDesign.Designer.csproj">
+      <Project>{78cc29ac-cc79-4355-b1f2-97936df198ac}</Project>
+      <Name>WpfDesign.Designer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\CSharp\private Projekte\github\clones\SharpDevelop\src\AddIns\DisplayBindings\WpfDesign\WpfDesign.XamlDom\Project\WpfDesign.XamlDom.csproj">
+      <Project>{88da149f-21b2-48ab-82c4-28fb6bdfd783}</Project>
+      <Name>WpfDesign.XamlDom</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\CSharp\private Projekte\github\clones\SharpDevelop\src\AddIns\DisplayBindings\WpfDesign\WpfDesign\Project\WpfDesign.csproj">
+      <Project>{66a378a1-e9f4-4ad5-8946-d0ec06c2902f}</Project>
+      <Name>WpfDesign</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
