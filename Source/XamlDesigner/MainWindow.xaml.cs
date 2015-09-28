@@ -26,8 +26,9 @@ namespace ICSharpCode.XamlDesigner
 			Shell.Instance.PropertyGrid = (PropertyGrid) uxPropertyGridView.PropertyGrid;
 			AvalonDockWorkaround();
 			RouteDesignSurfaceCommands();
-
 			this.AddCommandHandler(RefreshCommand, Shell.Instance.Refresh, Shell.Instance.CanRefresh);
+			
+			
 
 			LoadSettings();
 			ProcessPaths(App.Args);

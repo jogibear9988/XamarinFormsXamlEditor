@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.Windows;
 using System.Collections.Specialized;
 using ICSharpCode.WpfDesign;
+using XamarinFormsClasses.Base;
 
 namespace ICSharpCode.XamlDesigner
 {
@@ -78,7 +79,7 @@ namespace ICSharpCode.XamlDesigner
 
 		static bool IsControl(Type t)
 		{
-			return !t.IsAbstract && !t.IsGenericTypeDefinition && t.IsSubclassOf(typeof(FrameworkElement));
+            return !t.IsAbstract && !t.IsGenericTypeDefinition && t.IsSubclassOf(typeof(VisualElement));
 		}
 	}
 

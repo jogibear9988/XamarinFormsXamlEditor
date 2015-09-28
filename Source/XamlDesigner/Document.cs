@@ -1,6 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.ComponentModel;
 using System.IO;
@@ -10,7 +8,7 @@ using ICSharpCode.WpfDesign.Designer.OutlineView;
 using System.Xml;
 using ICSharpCode.WpfDesign;
 using ICSharpCode.WpfDesign.Designer.Services;
-using System.Diagnostics;
+using XamarinFormsClasses.Services;
 
 namespace ICSharpCode.XamlDesigner
 {
@@ -20,15 +18,16 @@ namespace ICSharpCode.XamlDesigner
 		{
 			this.tempName = tempName;
 			Text = text;
-			IsDirty = false;
+			IsDirty = false;			
 		}
 
 		public Document(string filePath)
 		{
 			this.filePath = filePath;
+
 			ReloadFile();
 		}
-		
+
 		string tempName;
 		DesignSurface designSurface = new DesignSurface();
 
@@ -217,10 +216,17 @@ namespace ICSharpCode.XamlDesigner
 			}
 			if (DesignContext.RootItem != null) {
 				OutlineRoot = (OutlineNode) OutlineNode.Create(DesignContext.RootItem);
-				UndoService.UndoStackChanged += new EventHandler(UndoService_UndoStackChanged);
+				UndoService.UndoStackChanged += UndoService_UndoStackChanged;
 			}
 			RaisePropertyChanged("SelectionService");
 			RaisePropertyChanged("XamlErrorService");
+
+			LoadServices();
+		}
+
+		private void LoadServices()
+		{
+			designSurface.DesignContext.Services.AddOrReplaceService(typeof(IComponentPropertyService), new XamarinFormsComponentPropertyService());
 		}
 
 		void UndoService_UndoStackChanged(object sender, EventArgs e)

@@ -21,7 +21,7 @@ namespace XamarinFormsClasses.Controls
         }
 
         public static readonly DependencyProperty TextProperty =
-            DependencyProperty.Register("Text", typeof(string), typeof(Label), new PropertyMetadata(null));
+            DependencyProperty.Register("Text", typeof(string), typeof(Button), new PropertyMetadata(null));
 
         [TypeConverter(typeof(FontSizeConveter))]
         public double FontSize
@@ -31,7 +31,7 @@ namespace XamarinFormsClasses.Controls
         }
 
         public static readonly DependencyProperty FontSizeProperty =
-            DependencyProperty.Register("FontSize", typeof(double), typeof(Label), new PropertyMetadata(10.0));
+            DependencyProperty.Register("FontSize", typeof(double), typeof(Button), new PropertyMetadata(10.0));
 
         public FontAttributes FontAttributes
         {
@@ -40,7 +40,7 @@ namespace XamarinFormsClasses.Controls
         }
 
         public static readonly DependencyProperty FontAttributesProperty =
-            DependencyProperty.Register("FontAttributes", typeof(FontAttributes), typeof(Label), new PropertyMetadata(Enums.FontAttributes.None));
+            DependencyProperty.Register("FontAttributes", typeof(FontAttributes), typeof(Button), new PropertyMetadata(Enums.FontAttributes.None));
 
         public Color TextColor
         {
@@ -49,7 +49,7 @@ namespace XamarinFormsClasses.Controls
         }
 
         public static readonly DependencyProperty TextColorProperty =
-            DependencyProperty.Register("TextColor", typeof(Color), typeof(Label), new PropertyMetadata(Colors.Black));
+            DependencyProperty.Register("TextColor", typeof(Color), typeof(Button), new PropertyMetadata(Colors.Black));
 
     }
 }

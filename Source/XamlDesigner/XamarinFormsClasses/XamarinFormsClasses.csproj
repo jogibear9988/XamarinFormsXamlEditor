@@ -49,6 +49,7 @@
     <Compile Include="Base\Element.cs" />
     <Compile Include="Base\Layout.cs" />
     <Compile Include="Base\Layouts\AbsoluteLayout.cs" />
+    <Compile Include="Base\Layouts\Grid_Extension.cs" />
     <Compile Include="Base\Layouts\Grid.cs" />
     <Compile Include="Base\Layouts\AbsoluteLayout_Extension.cs" />
     <Compile Include="Base\Layouts\RelativeLayout.cs" />
@@ -62,6 +63,8 @@
     <Compile Include="Converters\MultiBindingReturnFirstConverter.cs" />
     <Compile Include="Converters\RotationToAngleInTransFormGroupConverter.cs" />
     <Compile Include="Converters\LayoutOptionsToHorizontalAlignmentConverter.cs" />
+    <Compile Include="Extension\BorderForInvisibleControlXamarin.cs" />
+    <Compile Include="Extension\PanelMove.cs" />
     <Compile Include="Extension\Placement\DefaultPlacementBehavior.cs" />
     <Compile Include="Base\Views\Button.cs" />
     <Compile Include="Base\Views\ButtonView.cs" />
@@ -75,8 +78,11 @@
     <Compile Include="Enums\FontSize.cs" />
     <Compile Include="Enums\LayoutOptions.cs" />
     <Compile Include="Enums\TextAlignment.cs" />
+    <Compile Include="Extension\Placement\GridPlacementSupport.cs" />
     <Compile Include="Extension\ResizeThumbExtension.cs" />
-    <Compile Include="Extension\SelectedElementRectangleExtension.cs" />
+    <Compile Include="Extension\SelectedElementRectangleExtensionXamarin.cs" />
+    <Compile Include="Extension\TopLeftContainerDragHandleXamarin.cs" />
+    <Compile Include="Extension\TopLeftContainerDragHandleMultipleItemsXamarin.cs" />
     <Compile Include="Pages\ContentPageView.xaml.cs">
       <DependentUpon>ContentPageView.xaml</DependentUpon>
     </Compile>
@@ -84,6 +90,7 @@
     <Compile Include="Pages\ContentPage.cs" />
     <Compile Include="Base\Views\Label.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\XamarinFormsComponentPropertyService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Panels\" />

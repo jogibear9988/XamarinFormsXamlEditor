@@ -16,39 +16,25 @@
 // OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 // DEALINGS IN THE SOFTWARE.
 
-using System.Windows;
-using System.Windows.Media;
-using System.Windows.Shapes;
 using ICSharpCode.WpfDesign.Adorners;
 using ICSharpCode.WpfDesign.Extensions;
+using ICSharpCode.WpfDesign.Designer.Controls;
 using XamarinFormsClasses.Base;
 
-namespace XamarinFormsClasses.Extension
+namespace ICSharpCode.WpfDesign.Designer.Extensions
 {
-	/// <summary>
-	/// Draws a dotted line around selected UIElements.
-	/// </summary>
-	[ExtensionFor(typeof(VisualElement))]
-	public sealed class SelectedElementRectangleExtension : SelectionAdornerProvider
+	[ExtensionFor(typeof(View))]
+	public class PanelMove : PermanentAdornerProvider
 	{
-		/// <summary>
-		/// Creates a new SelectedElementRectangleExtension instance.
-		/// </summary>
-		public SelectedElementRectangleExtension()
+		protected override void OnInitialized()
 		{
-			Rectangle selectionRect = new Rectangle();
-			selectionRect.SnapsToDevicePixels = true;
-			selectionRect.Stroke = new SolidColorBrush(Color.FromRgb(0x47, 0x47, 0x47));
-			selectionRect.StrokeThickness = 1.5;
-			selectionRect.IsHitTestVisible = false;
+			base.OnInitialized();
 
-			RelativePlacement placement = new RelativePlacement(HorizontalAlignment.Stretch, VerticalAlignment.Stretch);
-			placement.XOffset = -1;
-			placement.YOffset = -1;
-			placement.WidthOffset = 2;
-			placement.HeightOffset = 2;
-
-			this.AddAdorners(placement, selectionRect);
+			var adornerPanel = new AdornerPanel();
+			var adorner = new PanelMoveAdorner(ExtendedItem);
+			AdornerPanel.SetPlacement(adorner, AdornerPlacement.FillContent);
+			adornerPanel.Children.Add(adorner);
+			Adorners.Add(adornerPanel);
 		}
 	}
 }

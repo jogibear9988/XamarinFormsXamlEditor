@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.Collections.Generic;
+using System.Windows;
 using System.Windows.Markup;
 
 namespace XamarinFormsClasses.Base
@@ -23,5 +24,11 @@ namespace XamarinFormsClasses.Base
 
         public static readonly DependencyProperty PaddingProperty =
             DependencyProperty.Register("Padding", typeof(Thickness), typeof(Layout), new PropertyMetadata(new Thickness()));
+
+        private List<View> _children = new List<View>();
+        public List<View> Children
+        {
+            get { return _children; }
+        }
     }
 }
