@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using ICSharpCode.WpfDesign.Designer;
+﻿using System.Windows;
+using System.Windows.Media;
 
-namespace XamarinFormsClasses.Base
+namespace Xamarin.Forms
 {
     public class VisualElement : Element
     {
@@ -89,6 +84,33 @@ namespace XamarinFormsClasses.Base
         }
 
         public static readonly DependencyProperty HeightProperty =
-            DependencyProperty.Register("Height", typeof(double), typeof(VisualElement), new PropertyMetadata(double.NaN));        
+            DependencyProperty.Register("Height", typeof(double), typeof(VisualElement), new PropertyMetadata(double.NaN));
+
+		public double WidthRequest
+		{
+			get { return (double)GetValue(WidthRequestProperty); }
+			set { SetValue(WidthRequestProperty, value); }
+		}
+
+		public static readonly DependencyProperty WidthRequestProperty =
+			DependencyProperty.Register("WidthRequest", typeof(double), typeof(VisualElement), new PropertyMetadata(0.0));
+
+		public double HeightRequest
+		{
+			get { return (double)GetValue(HeightRequestProperty); }
+			set { SetValue(HeightRequestProperty, value); }
+		}
+
+		public static readonly DependencyProperty HeightRequestProperty =
+			DependencyProperty.Register("HeightRequest", typeof(double), typeof(VisualElement), new PropertyMetadata(0.0));
+		
+		public Color BackgroundColor
+		{
+			get { return (Color)GetValue(BackgroundColorProperty); }
+			set { SetValue(BackgroundColorProperty, value); }
+		}
+
+		public static readonly DependencyProperty BackgroundColorProperty =
+			DependencyProperty.Register("BackgroundColor", typeof(Color), typeof(VisualElement), new PropertyMetadata(Colors.Transparent));			
     }
 }

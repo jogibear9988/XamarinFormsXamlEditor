@@ -2,14 +2,11 @@
 using System.Windows;
 using System.Windows.Markup;
 using System.Windows.Media;
-using XamarinFormsClasses.Base;
 using XamarinFormsClasses.Converters;
 using XamarinFormsClasses.Enums;
 using TextAlignment = XamarinFormsClasses.Enums.TextAlignment;
 
-[assembly: XmlnsDefinition("http://xamarin.com/schemas/2014/forms", "XamarinFormsClasses.Controls")]
-
-namespace XamarinFormsClasses.Controls
+namespace Xamarin.Forms
 {
     [ContentProperty("Text")]
     public class Label : View
@@ -68,7 +65,7 @@ namespace XamarinFormsClasses.Controls
         }
 
         public static readonly DependencyProperty FontAttributesProperty =
-            DependencyProperty.Register("FontAttributes", typeof(FontAttributes), typeof(Label), new PropertyMetadata(Enums.FontAttributes.None));
+            DependencyProperty.Register("FontAttributes", typeof(FontAttributes), typeof(Label), new PropertyMetadata(FontAttributes.None));
 
 
 

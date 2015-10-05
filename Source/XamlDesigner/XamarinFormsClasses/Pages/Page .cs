@@ -1,10 +1,6 @@
 ﻿using System.Windows;
-using System.Windows.Markup;
-using XamarinFormsClasses.Base;
 
-[assembly: XmlnsDefinition("http://xamarin.com/schemas/2014/forms", "XamarinFormsClasses.Pages")]
-
-namespace XamarinFormsClasses.Pages
+namespace Xamarin.Forms
 {
     public class Page : VisualElement
     {
@@ -25,8 +21,5 @@ namespace XamarinFormsClasses.Pages
         
         public static readonly DependencyProperty PaddingProperty =
             DependencyProperty.Register("Padding", typeof(Thickness), typeof(Page), new PropertyMetadata(new Thickness(1)));
-
-        
-        
     }
 }

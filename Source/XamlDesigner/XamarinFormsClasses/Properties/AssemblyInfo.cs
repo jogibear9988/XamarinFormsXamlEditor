@@ -1,6 +1,5 @@
 ﻿using System.Reflection;
 using System.Resources;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Markup;
@@ -52,4 +51,5 @@ using System.Windows.Markup;
 [assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.MainAssembly)]
 
 [assembly: XmlnsPrefix("http://xamarin.com/schemas/2014/forms", "")]
+[assembly: XmlnsDefinition("http://xamarin.com/schemas/2014/forms", "Xamarin.Forms")]
 

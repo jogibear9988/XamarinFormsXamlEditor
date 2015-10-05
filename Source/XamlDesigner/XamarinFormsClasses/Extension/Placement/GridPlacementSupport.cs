@@ -16,28 +16,27 @@
 // OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 // DEALINGS IN THE SOFTWARE.
 
-using System.Windows;
 using System.Diagnostics;
-using System.Windows.Controls;
-
-using ICSharpCode.WpfDesign.Extensions;
+using System.Windows;
+using ICSharpCode.WpfDesign;
 using ICSharpCode.WpfDesign.Designer.Controls;
+using ICSharpCode.WpfDesign.Extensions;
 
-namespace ICSharpCode.WpfDesign.Designer.Extensions
+namespace Xamarin.Forms.Extension.Placement
 {
 	/// <summary>
-	/// Provides <see cref="IPlacementBehavior"/> behavior for <see cref="Grid"/>.
+	/// Provides <see cref="IPlacementBehavior"/> behavior for <see cref="System.Windows.Controls.Grid"/>.
 	/// </summary>
-	[ExtensionFor(typeof(XamarinFormsClasses.Base.Layouts.Grid), OverrideExtension=typeof(DefaultPlacementBehavior))]
+	[ExtensionFor(typeof(Xamarin.Forms.Grid), OverrideExtension=typeof(DefaultPlacementBehavior))]
 	public sealed class GridPlacementSupport : SnaplinePlacementBehavior
 	{
-		Grid grid;
+		System.Windows.Controls.Grid grid;
 		private bool enteredIntoNewContainer;
 		
 		protected override void OnInitialized()
 		{
 			base.OnInitialized();
-			grid = (Grid)this.ExtendedItem.View;
+			grid = (System.Windows.Controls.Grid)this.ExtendedItem.View;
 		}
 		
 		double GetColumnOffset(int index)
@@ -110,22 +109,22 @@ namespace ICSharpCode.WpfDesign.Designer.Extensions
 		static void SetColumn(DesignItem item, int column, int columnSpan)
 		{
 			Debug.Assert(item != null && column >= 0 && columnSpan > 0);
-			item.Properties.GetAttachedProperty(Grid.ColumnProperty).SetValue(column);
+			item.Properties.GetAttachedProperty(System.Windows.Controls.Grid.ColumnProperty).SetValue(column);
 			if (columnSpan == 1) {
-				item.Properties.GetAttachedProperty(Grid.ColumnSpanProperty).Reset();
+				item.Properties.GetAttachedProperty(System.Windows.Controls.Grid.ColumnSpanProperty).Reset();
 			} else {
-				item.Properties.GetAttachedProperty(Grid.ColumnSpanProperty).SetValue(columnSpan);
+				item.Properties.GetAttachedProperty(System.Windows.Controls.Grid.ColumnSpanProperty).SetValue(columnSpan);
 			}
 		}
 		
 		static void SetRow(DesignItem item, int row, int rowSpan)
 		{
 			Debug.Assert(item != null && row >= 0 && rowSpan > 0);
-			item.Properties.GetAttachedProperty(Grid.RowProperty).SetValue(row);
+			item.Properties.GetAttachedProperty(System.Windows.Controls.Grid.RowProperty).SetValue(row);
 			if (rowSpan == 1) {
-				item.Properties.GetAttachedProperty(Grid.RowSpanProperty).Reset();
+				item.Properties.GetAttachedProperty(System.Windows.Controls.Grid.RowSpanProperty).Reset();
 			} else {
-				item.Properties.GetAttachedProperty(Grid.RowSpanProperty).SetValue(rowSpan);
+				item.Properties.GetAttachedProperty(System.Windows.Controls.Grid.RowSpanProperty).SetValue(rowSpan);
 			}
 		}
 		
@@ -250,16 +249,16 @@ namespace ICSharpCode.WpfDesign.Designer.Extensions
 			GrayOutDesignerExceptActiveArea.Stop(ref grayOut);
 			base.LeaveContainer(operation);
 			foreach (PlacementInformation info in operation.PlacedItems) {
-				if (info.Item.ComponentType == typeof(ColumnDefinition)) {
+				if (info.Item.ComponentType == typeof(System.Windows.Controls.ColumnDefinition)) {
 					// TODO: combine the width of the deleted column with the previous column
 					this.ExtendedItem.Properties["ColumnDefinitions"].CollectionElements.Remove(info.Item);
-				} else if (info.Item.ComponentType == typeof(RowDefinition)) {
+				} else if (info.Item.ComponentType == typeof(System.Windows.Controls.RowDefinition)) {
 					this.ExtendedItem.Properties["RowDefinitions"].CollectionElements.Remove(info.Item);
 				} else {
-					info.Item.Properties.GetAttachedProperty(Grid.RowProperty).Reset();
-					info.Item.Properties.GetAttachedProperty(Grid.ColumnProperty).Reset();
-					info.Item.Properties.GetAttachedProperty(Grid.RowSpanProperty).Reset();
-					info.Item.Properties.GetAttachedProperty(Grid.ColumnSpanProperty).Reset();
+					info.Item.Properties.GetAttachedProperty(System.Windows.Controls.Grid.RowProperty).Reset();
+					info.Item.Properties.GetAttachedProperty(System.Windows.Controls.Grid.ColumnProperty).Reset();
+					info.Item.Properties.GetAttachedProperty(System.Windows.Controls.Grid.RowSpanProperty).Reset();
+					info.Item.Properties.GetAttachedProperty(System.Windows.Controls.Grid.ColumnSpanProperty).Reset();
 
 					HorizontalAlignment ha = (HorizontalAlignment)info.Item.Properties[FrameworkElement.HorizontalAlignmentProperty].ValueOnInstance;
 					VerticalAlignment va = (VerticalAlignment)info.Item.Properties[FrameworkElement.VerticalAlignmentProperty].ValueOnInstance;

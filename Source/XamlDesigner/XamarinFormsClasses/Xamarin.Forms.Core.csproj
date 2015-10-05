@@ -7,8 +7,8 @@
     <ProjectGuid>{FEF5A293-C086-4804-BF6A-3524893647E2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>XamarinFormsClasses</RootNamespace>
-    <AssemblyName>XamarinFormsClasses</AssemblyName>
+    <RootNamespace>Xamarin.Forms</RootNamespace>
+    <AssemblyName>Xamarin.Forms.Core</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -49,13 +49,20 @@
     <Compile Include="Base\Element.cs" />
     <Compile Include="Base\Layout.cs" />
     <Compile Include="Base\Layouts\AbsoluteLayout.cs" />
+    <Compile Include="Base\Layouts\GridComponents\ColumnDefinition.cs" />
+    <Compile Include="Base\Layouts\GridComponents\ColumnDefinitionCollection.cs" />
+    <Compile Include="Base\Layouts\GridComponents\RowDefinition.cs" />
+    <Compile Include="Base\Layouts\ContentView_Extension.cs" />
+    <Compile Include="Base\Layouts\StackLayout_Extension.cs" />
     <Compile Include="Base\Layouts\Grid_Extension.cs" />
     <Compile Include="Base\Layouts\Grid.cs" />
     <Compile Include="Base\Layouts\AbsoluteLayout_Extension.cs" />
     <Compile Include="Base\Layouts\RelativeLayout.cs" />
+    <Compile Include="Base\Layouts\ContentView.cs" />
     <Compile Include="Base\Layouts\StackLayout.cs" />
     <Compile Include="Base\View.cs" />
     <Compile Include="Base\ViewExtension.cs" />
+    <Compile Include="Base\Views\BoxView.cs" />
     <Compile Include="Base\VisualElement.cs" />
     <Compile Include="Base\VisualElementExtension.cs" />
     <Compile Include="Converters\LambdaConverter.cs" />
@@ -63,8 +70,10 @@
     <Compile Include="Converters\MultiBindingReturnFirstConverter.cs" />
     <Compile Include="Converters\RotationToAngleInTransFormGroupConverter.cs" />
     <Compile Include="Converters\LayoutOptionsToHorizontalAlignmentConverter.cs" />
+    <Compile Include="Enums\StackOrientation.cs" />
     <Compile Include="Extension\BorderForInvisibleControlXamarin.cs" />
     <Compile Include="Extension\PanelMove.cs" />
+    <Compile Include="Extension\Placement\CanvasPlacementSupport.cs" />
     <Compile Include="Extension\Placement\DefaultPlacementBehavior.cs" />
     <Compile Include="Base\Views\Button.cs" />
     <Compile Include="Base\Views\ButtonView.cs" />
@@ -79,10 +88,14 @@
     <Compile Include="Enums\LayoutOptions.cs" />
     <Compile Include="Enums\TextAlignment.cs" />
     <Compile Include="Extension\Placement\GridPlacementSupport.cs" />
+    <Compile Include="Extension\Placement\RasterPlacementBehavior.cs" />
+    <Compile Include="Extension\Placement\SnaplinePlacementBehavior.cs" />
+    <Compile Include="Extension\Placement\StackPanelPlacementSupport.cs" />
     <Compile Include="Extension\ResizeThumbExtension.cs" />
     <Compile Include="Extension\SelectedElementRectangleExtensionXamarin.cs" />
     <Compile Include="Extension\TopLeftContainerDragHandleXamarin.cs" />
     <Compile Include="Extension\TopLeftContainerDragHandleMultipleItemsXamarin.cs" />
+    <Compile Include="Helper\TransparentBrush.cs" />
     <Compile Include="Pages\ContentPageView.xaml.cs">
       <DependentUpon>ContentPageView.xaml</DependentUpon>
     </Compile>
@@ -93,7 +106,7 @@
     <Compile Include="Services\XamarinFormsComponentPropertyService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Panels\" />
+    <Resource Include="Resources\Images\transparent.png" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="Pages\ContentPageView.xaml">

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamlSamples.SliderBindingsPage"
+             Title="Slider Bindings Page">
+
+	<StackLayout Padding="2" Spacing="2" BackgroundColor="Gray">
+		<Label Text="Start" BackgroundColor="White" XAlign="Center" YAlign="Center" HorizontalOptions="Start" VerticalOptions="Start" WidthRequest="160" HeightRequest="25"></Label>
+		<BoxView HeightRequest="1" Color="Yellow"/>
+		<Label Text="Start" BackgroundColor="White" XAlign="Center" YAlign="Center" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="160" HeightRequest="25"></Label>
+		<BoxView HeightRequest="1" Color="Yellow"/>
+		<Label Text="Start" BackgroundColor="White" XAlign="Center" YAlign="Center" HorizontalOptions="End" VerticalOptions="End" WidthRequest="160" HeightRequest="25"></Label>
+		<BoxView HeightRequest="1" Color="Yellow"/>
+		<Label Text="Start" BackgroundColor="White" XAlign="Center" YAlign="Center" HorizontalOptions="Fill" VerticalOptions="Fill" WidthRequest="160" HeightRequest="25"></Label>
+		<BoxView HeightRequest="1" Color="Yellow"/>
+		<Label Text="Start" BackgroundColor="White" XAlign="Center" YAlign="Center" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand" WidthRequest="160" HeightRequest="25"></Label>
+		<BoxView HeightRequest="1" Color="Yellow"/>
+		<Label Text="Start" BackgroundColor="White" XAlign="Center" YAlign="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" WidthRequest="160" HeightRequest="25"></Label>
+		<BoxView HeightRequest="1" Color="Yellow"/>
+		<Label Text="Start" BackgroundColor="White" XAlign="Center" YAlign="Center" HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand" WidthRequest="160" HeightRequest="25"></Label>
+		<BoxView HeightRequest="1" Color="Yellow"/>
+		<Label Text="Start" BackgroundColor="White" XAlign="Center" YAlign="Center" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" WidthRequest="160" HeightRequest="25"></Label>
+		<BoxView HeightRequest="1" Color="Yellow"/>
+	</StackLayout>
+</ContentPage>

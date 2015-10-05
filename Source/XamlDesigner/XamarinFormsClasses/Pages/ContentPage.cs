@@ -1,10 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Markup;
-using XamarinFormsClasses.Base;
 
-[assembly: XmlnsDefinition("http://xamarin.com/schemas/2014/forms", "XamarinFormsClasses.Pages")]
-
-namespace XamarinFormsClasses.Pages
+namespace Xamarin.Forms
 {
     [ContentProperty("Content")]
     public class ContentPage : Page

@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Globalization;
-using System.Windows;
 using System.Windows.Data;
 using System.Windows.Media;
-using TextAlignment = XamarinFormsClasses.Enums.TextAlignment;
 
 namespace XamarinFormsClasses.Converters
 {

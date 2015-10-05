@@ -5,7 +5,7 @@ VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamlDesigner", "XamlDesigner.csproj", "{27DA2B5C-2AAA-4478-AB00-3E184273C241}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XamarinFormsClasses", "XamarinFormsClasses\XamarinFormsClasses.csproj", "{FEF5A293-C086-4804-BF6A-3524893647E2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xamarin.Forms.Core", "XamarinFormsClasses\Xamarin.Forms.Core.csproj", "{FEF5A293-C086-4804-BF6A-3524893647E2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfDesign", "..\..\..\..\CSharp\private Projekte\github\clones\SharpDevelop\src\AddIns\DisplayBindings\WpfDesign\WpfDesign\Project\WpfDesign.csproj", "{66A378A1-E9F4-4AD5-8946-D0EC06C2902F}"
 EndProject

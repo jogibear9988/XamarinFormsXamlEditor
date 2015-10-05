@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Windows;
 using System.Windows.Data;
 using ICSharpCode.WpfDesign;
 using ICSharpCode.WpfDesign.Extensions;
+using Xamarin.Forms;
+using XamarinFormsClasses.Base;
 using XamarinFormsClasses.Converters;
 
 namespace XamarinFormsClasses.Controls
@@ -14,19 +12,22 @@ namespace XamarinFormsClasses.Controls
     {
     }
 
-    [ExtensionFor(typeof(Label))]
-    public class ButtonViewExtension : DesignItemInitializer
+    [ExtensionFor(typeof(Button))]
+	public class ButtonViewExtension : ViewExtension
     {
-        public override void InitializeDesignItem(DesignItem item)
-        {
-            var view = new ButtonView();
+		public override FrameworkElement CreateView(DesignItem item)
+		{
+			return new ButtonView();
+		}
 
+		public override void SetBindings(DesignItem item, FrameworkElement view)
+		{
+			base.SetBindings(item, view);
+           
             view.SetBinding(ButtonView.ContentProperty, new Binding("ContentProperty.ValueOnInstanceOrView") { Source = item });
             view.SetBinding(ButtonView.VisibilityProperty, new Binding("Component.IsVisible") { Source = item, Converter = IsVisibleToVisibilityConverter.Instance });
             view.SetBinding(ButtonView.FontSizeProperty, new Binding("Component.FontSize") { Source = item });
             view.SetBinding(ButtonView.ForegroundProperty, new Binding("Component.TextColor") { Source = item, Converter = ColorToBrushConverter.Instance });
-            
-            item.SetView(view);
         }
     }
 }

@@ -7,6 +7,7 @@ using System.ComponentModel;
 using Microsoft.Win32;
 using ICSharpCode.WpfDesign.Designer;
 using ICSharpCode.WpfDesign.Designer.PropertyGrid;
+using Xamarin.Forms;
 using XamarinFormsClasses.Pages;
 using Xceed.Wpf.AvalonDock.Layout;
 

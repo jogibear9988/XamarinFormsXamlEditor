@@ -19,15 +19,16 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Windows.Input;
-using ICSharpCode.WpfDesign.Extensions;
-using System.Windows.Controls;
 using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Input;
+using ICSharpCode.WpfDesign;
+using ICSharpCode.WpfDesign.Designer;
 using ICSharpCode.WpfDesign.Designer.Controls;
+using ICSharpCode.WpfDesign.Extensions;
 using ICSharpCode.WpfDesign.XamlDom;
-using XamarinFormsClasses.Base;
 
-namespace ICSharpCode.WpfDesign.Designer.Extensions
+namespace Xamarin.Forms.Extension.Placement
 {
 	[ExtensionFor(typeof(VisualElement))]
 	public class DefaultPlacementBehavior : BehaviorExtension, IPlacementBehavior

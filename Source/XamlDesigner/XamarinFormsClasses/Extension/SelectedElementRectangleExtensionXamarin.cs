@@ -1,6 +1,6 @@
 ﻿using ICSharpCode.WpfDesign.Designer.Extensions;
 using ICSharpCode.WpfDesign.Extensions;
-using XamarinFormsClasses.Base;
+using Xamarin.Forms;
 
 namespace XamarinFormsClasses.Extension
 {

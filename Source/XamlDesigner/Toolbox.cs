@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.Windows;
 using System.Collections.Specialized;
 using ICSharpCode.WpfDesign;
+using Xamarin.Forms;
 using XamarinFormsClasses.Base;
 
 namespace ICSharpCode.XamlDesigner

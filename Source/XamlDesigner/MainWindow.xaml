@@ -125,7 +125,7 @@
                     </xcad:LayoutDocumentPaneGroup>
 
                     <xcad:LayoutAnchorablePaneGroup DockWidth="160" Orientation="Vertical">
-                        <xcad:LayoutAnchorablePane DockHeight="130">
+                        <xcad:LayoutAnchorablePane DockHeight="90">
                             <xcad:LayoutAnchorable Title="Miniature">
                                 <sd:ThumbnailView x:Name="uxThumbnailView" DesignSurface="{Binding DataContext.CurrentDocument.DesignSurface, ElementName=root, FallbackValue={x:Null}}" />
                             </xcad:LayoutAnchorable>

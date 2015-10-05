@@ -2,7 +2,7 @@
 using System.Windows;
 using System.Windows.Markup;
 
-namespace XamarinFormsClasses.Base
+namespace Xamarin.Forms
 {
     [ContentProperty("Children")]
     public class Layout : View

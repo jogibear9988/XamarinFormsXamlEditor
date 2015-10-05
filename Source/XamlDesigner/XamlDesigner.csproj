@@ -151,6 +151,10 @@
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="NewFileTemplate3.xaml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <Page Include="Themes\Generic.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -184,9 +188,9 @@
       <Project>{66a378a1-e9f4-4ad5-8946-d0ec06c2902f}</Project>
       <Name>WpfDesign</Name>
     </ProjectReference>
-    <ProjectReference Include="XamarinFormsClasses\XamarinFormsClasses.csproj">
+    <ProjectReference Include="XamarinFormsClasses\Xamarin.Forms.Core.csproj">
       <Project>{fef5a293-c086-4804-bf6a-3524893647e2}</Project>
-      <Name>XamarinFormsClasses</Name>
+      <Name>Xamarin.Forms.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

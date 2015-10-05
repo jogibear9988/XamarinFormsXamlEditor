@@ -1,15 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Markup;
+﻿using System.Windows;
 
-[assembly: XmlnsDefinition("http://xamarin.com/schemas/2014/forms", "XamarinFormsClasses.Base.Layouts")]
-namespace XamarinFormsClasses.Base.Layouts
+namespace Xamarin.Forms
 {
     public class Grid : Layout
     {
+		public ColumnDefinitionCollection Columns
+		{
+			get { return (ColumnDefinitionCollection)GetValue(ColumnsProperty); }
+			set { SetValue(ColumnsProperty, value); }
+		}
 
+		public static readonly DependencyProperty ColumnsProperty =
+			DependencyProperty.Register("Columns", typeof(ColumnDefinitionCollection), typeof(Grid), new PropertyMetadata(null));
     }
 }

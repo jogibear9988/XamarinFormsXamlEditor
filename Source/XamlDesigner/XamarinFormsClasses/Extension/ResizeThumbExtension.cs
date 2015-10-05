@@ -22,7 +22,7 @@ using System.Windows.Input;
 using ICSharpCode.WpfDesign.Adorners;
 using ICSharpCode.WpfDesign.Designer.Controls;
 using ICSharpCode.WpfDesign.Extensions;
-using XamarinFormsClasses.Base;
+using Xamarin.Forms;
 
 namespace ICSharpCode.WpfDesign.Designer.Extensions
 {
@@ -164,7 +164,7 @@ namespace ICSharpCode.WpfDesign.Designer.Extensions
 			var newWidth = Math.Max(0, oldSize.Width + dx);
 			var newHeight = Math.Max(0, oldSize.Height + dy);
 
-			if (operation.CurrentContainerBehavior is GridPlacementSupport)
+			if (operation.CurrentContainerBehavior is Xamarin.Forms.Extension.Placement.GridPlacementSupport)
 			{
 				var hor = (HorizontalAlignment)this.ExtendedItem.Properties[FrameworkElement.HorizontalAlignmentProperty].ValueOnInstance;
 				var ver = (VerticalAlignment)this.ExtendedItem.Properties[FrameworkElement.VerticalAlignmentProperty].ValueOnInstance;

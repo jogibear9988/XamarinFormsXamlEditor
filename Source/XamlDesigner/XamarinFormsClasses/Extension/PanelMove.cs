@@ -19,7 +19,7 @@
 using ICSharpCode.WpfDesign.Adorners;
 using ICSharpCode.WpfDesign.Extensions;
 using ICSharpCode.WpfDesign.Designer.Controls;
-using XamarinFormsClasses.Base;
+using Xamarin.Forms;
 
 namespace ICSharpCode.WpfDesign.Designer.Extensions
 {
