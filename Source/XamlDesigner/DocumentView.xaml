@@ -2,12 +2,10 @@
 	x:Class="ICSharpCode.XamlDesigner.DocumentView"
 	xmlns="http://schemas.microsoft.com/netfx/2007/xaml/presentation"
 	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-	xmlns:Default="clr-namespace:ICSharpCode.XamlDesigner"
-	xmlns:DesignerControls="clr-namespace:ICSharpCode.WpfDesign.Designer.Controls;assembly=ICSharpCode.WpfDesign.Designer"
 	xmlns:AvalonEdit="http://icsharpcode.net/sharpdevelop/avalonedit"
->
+	xmlns:sd="http://sharpdevelop.net">
 	<DockPanel>
-		<DesignerControls:EnumBar
+		<sd:EnumBar
 			Value="{Binding Mode}"
 			DockPanel.Dock="Bottom"/>
 		<Grid>

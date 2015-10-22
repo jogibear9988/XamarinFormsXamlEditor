@@ -116,7 +116,7 @@ namespace ICSharpCode.XamlDesigner
 
 		public void New()
         {
-            Document doc = new Document("New" + nonameIndex++, File.ReadAllText("NewFileTemplate3.xaml"));
+            Document doc = new Document("New" + nonameIndex++, File.ReadAllText("NewFileTemplate.xaml"));
             Documents.Add(doc);
             CurrentDocument = doc;
         }
