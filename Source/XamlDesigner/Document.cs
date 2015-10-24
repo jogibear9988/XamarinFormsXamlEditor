@@ -8,6 +8,7 @@ using ICSharpCode.WpfDesign.Designer.OutlineView;
 using System.Xml;
 using ICSharpCode.WpfDesign;
 using ICSharpCode.WpfDesign.Designer.Services;
+using Xamarin.Forms.Services;
 using XamarinFormsClasses.Services;
 
 namespace ICSharpCode.XamlDesigner
@@ -227,6 +228,7 @@ namespace ICSharpCode.XamlDesigner
 		private void LoadServices()
 		{
 			designSurface.DesignContext.Services.AddOrReplaceService(typeof(IComponentPropertyService), new XamarinFormsComponentPropertyService());
+			designSurface.DesignContext.Services.AddOrReplaceService(typeof(ViewService), new XamarinFormsViewService(designSurface.DesignContext));
 		}
 
 		void UndoService_UndoStackChanged(object sender, EventArgs e)

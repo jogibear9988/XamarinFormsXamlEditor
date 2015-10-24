@@ -34,16 +34,16 @@
       <HintPath>..\packages\DotNetProjects.Extended.Wpf.Toolkit.2.5.6000\lib\net40\DotNetProjects.Wpf.Extended.Toolkit.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="ICSharpCode.WpfDesign, Version=1.0.11.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ICSharpCode.WpfDesigner.1.0.11\lib\net40\ICSharpCode.WpfDesign.dll</HintPath>
+    <Reference Include="ICSharpCode.WpfDesign, Version=1.0.15.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ICSharpCode.WpfDesigner.1.0.15\lib\net40\ICSharpCode.WpfDesign.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="ICSharpCode.WpfDesign.Designer, Version=1.0.11.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ICSharpCode.WpfDesigner.1.0.11\lib\net40\ICSharpCode.WpfDesign.Designer.dll</HintPath>
+    <Reference Include="ICSharpCode.WpfDesign.Designer, Version=1.0.15.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ICSharpCode.WpfDesigner.1.0.15\lib\net40\ICSharpCode.WpfDesign.Designer.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="ICSharpCode.WpfDesign.XamlDom, Version=1.0.11.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ICSharpCode.WpfDesigner.1.0.11\lib\net40\ICSharpCode.WpfDesign.XamlDom.dll</HintPath>
+    <Reference Include="ICSharpCode.WpfDesign.XamlDom, Version=1.0.15.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ICSharpCode.WpfDesigner.1.0.15\lib\net40\ICSharpCode.WpfDesign.XamlDom.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="PresentationCore" />
@@ -120,6 +120,7 @@
     <Compile Include="Base\Views\Label.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\XamarinFormsComponentPropertyService.cs" />
+    <Compile Include="Services\XamarinFormsViewService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Images\transparent.png" />
