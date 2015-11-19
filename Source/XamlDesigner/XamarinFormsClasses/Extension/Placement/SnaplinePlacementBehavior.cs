@@ -27,7 +27,8 @@ using System.Windows.Media;
 using System.Windows.Shapes;
 using ICSharpCode.WpfDesign;
 using ICSharpCode.WpfDesign.Adorners;
-using ICSharpCode.WpfDesign.Designer;
+using ICSharpCode.WpfDesign.Designer;		   
+using Keyboard = System.Windows.Input.Keyboard;
 
 namespace Xamarin.Forms.Extension.Placement
 {
@@ -90,7 +91,7 @@ namespace Xamarin.Forms.Extension.Placement
 				return base.PlacePoint(point); ;
 
 			surface.Children.Clear();
-			if (Keyboard.IsKeyDown(Key.LeftCtrl))
+			if (System.Windows.Input.Keyboard.IsKeyDown(Key.LeftCtrl))
 				return base.PlacePoint(point); ;
 
 			Rect bounds = new Rect(point.X, point.Y, 0, 0);
@@ -147,7 +148,7 @@ namespace Xamarin.Forms.Extension.Placement
 				return;
 			
 			surface.Children.Clear();
-			if (Keyboard.IsKeyDown(Key.LeftCtrl)) return;
+			if (System.Windows.Input.Keyboard.IsKeyDown(Key.LeftCtrl)) return;
 			
 			Rect bounds = Rect.Empty;
 			foreach (var item in operation.PlacedItems) {

@@ -23,6 +23,7 @@ using ICSharpCode.WpfDesign.Adorners;
 using ICSharpCode.WpfDesign.Designer.Controls;
 using ICSharpCode.WpfDesign.Extensions;
 using Xamarin.Forms;
+using Keyboard = System.Windows.Input.Keyboard;
 
 namespace ICSharpCode.WpfDesign.Designer.Extensions
 {

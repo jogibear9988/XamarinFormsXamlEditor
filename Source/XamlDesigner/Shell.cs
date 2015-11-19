@@ -1,15 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.ComponentModel;
 using System.Collections.ObjectModel;
 using ICSharpCode.WpfDesign.Designer.PropertyGrid;
-//using ICSharpCode.XamlDesigner.Configuration;
-using System.Collections.Specialized;
 using System.IO;
 using System.Windows;
-using System.Diagnostics;
 using ICSharpCode.WpfDesign.Designer.Services;
 
 namespace ICSharpCode.XamlDesigner
@@ -116,7 +112,7 @@ namespace ICSharpCode.XamlDesigner
 
 		public void New()
         {
-            Document doc = new Document("New" + nonameIndex++, File.ReadAllText("NewFileTemplate.xaml"));
+            Document doc = new Document("New" + nonameIndex++, File.ReadAllText("NewFileTemplate4.xaml"));
             Documents.Add(doc);
             CurrentDocument = doc;
         }

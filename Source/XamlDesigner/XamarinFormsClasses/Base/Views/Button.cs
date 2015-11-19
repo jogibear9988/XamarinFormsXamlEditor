@@ -47,5 +47,14 @@ namespace Xamarin.Forms
         public static readonly DependencyProperty TextColorProperty =
             DependencyProperty.Register("TextColor", typeof(Color), typeof(Button), new PropertyMetadata(Colors.Black));
 
-    }
+		public ICommand Command
+		{
+			get { return (ICommand)GetValue(CommandProperty); }
+			set { SetValue(CommandProperty, value); }
+		}
+
+		public static readonly DependencyProperty CommandProperty =
+			DependencyProperty.Register("Command", typeof(ICommand), typeof(Button), new PropertyMetadata());
+
+	}
 }

@@ -97,7 +97,7 @@ namespace Xamarin.Forms.Extension.Placement
 			if (designPanel == null || !designPanel.UseRasterPlacement)
 				return;
 
-			if (Keyboard.IsKeyDown(Key.LeftCtrl))
+			if (System.Windows.Input.Keyboard.IsKeyDown(Key.LeftCtrl))
 			{
 				surface.Children.Clear();
 				rasterDrawn = false;
@@ -123,7 +123,7 @@ namespace Xamarin.Forms.Extension.Placement
 			if (designPanel == null || !designPanel.UseRasterPlacement)
 				return base.PlacePoint(point);
 
-			if (Keyboard.IsKeyDown(Key.LeftCtrl))
+			if (System.Windows.Input.Keyboard.IsKeyDown(Key.LeftCtrl))
 			{
 				surface.Children.Clear();
 				rasterDrawn = false;

@@ -34,16 +34,16 @@
       <HintPath>..\packages\DotNetProjects.Extended.Wpf.Toolkit.2.5.6000\lib\net40\DotNetProjects.Wpf.Extended.Toolkit.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="ICSharpCode.WpfDesign, Version=1.0.15.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ICSharpCode.WpfDesigner.1.0.15\lib\net40\ICSharpCode.WpfDesign.dll</HintPath>
+    <Reference Include="ICSharpCode.WpfDesign, Version=1.0.16.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ICSharpCode.WpfDesigner.1.0.16\lib\net40\ICSharpCode.WpfDesign.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="ICSharpCode.WpfDesign.Designer, Version=1.0.15.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ICSharpCode.WpfDesigner.1.0.15\lib\net40\ICSharpCode.WpfDesign.Designer.dll</HintPath>
+    <Reference Include="ICSharpCode.WpfDesign.Designer, Version=1.0.16.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ICSharpCode.WpfDesigner.1.0.16\lib\net40\ICSharpCode.WpfDesign.Designer.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="ICSharpCode.WpfDesign.XamlDom, Version=1.0.15.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ICSharpCode.WpfDesigner.1.0.15\lib\net40\ICSharpCode.WpfDesign.XamlDom.dll</HintPath>
+    <Reference Include="ICSharpCode.WpfDesign.XamlDom, Version=1.0.16.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ICSharpCode.WpfDesigner.1.0.16\lib\net40\ICSharpCode.WpfDesign.XamlDom.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="PresentationCore" />
@@ -63,6 +63,9 @@
   <ItemGroup>
     <Compile Include="Base\BindableObject.cs" />
     <Compile Include="Base\Element.cs" />
+    <Compile Include="Base\Entry.cs" />
+    <Compile Include="Base\EntryView.cs" />
+    <Compile Include="Base\ICommand.cs" />
     <Compile Include="Base\Layout.cs" />
     <Compile Include="Base\Layouts\AbsoluteLayout.cs" />
     <Compile Include="Base\Layouts\GridComponents\ColumnDefinition.cs" />
@@ -76,6 +79,7 @@
     <Compile Include="Base\Layouts\RelativeLayout.cs" />
     <Compile Include="Base\Layouts\ContentView.cs" />
     <Compile Include="Base\Layouts\StackLayout.cs" />
+    <Compile Include="Base\InputView.cs" />
     <Compile Include="Base\View.cs" />
     <Compile Include="Base\ViewExtension.cs" />
     <Compile Include="Base\Views\BoxView.cs" />
@@ -86,6 +90,7 @@
     <Compile Include="Converters\MultiBindingReturnFirstConverter.cs" />
     <Compile Include="Converters\RotationToAngleInTransFormGroupConverter.cs" />
     <Compile Include="Converters\LayoutOptionsToHorizontalAlignmentConverter.cs" />
+    <Compile Include="Enums\Keyboard.cs" />
     <Compile Include="Enums\StackOrientation.cs" />
     <Compile Include="Extension\BorderForInvisibleControlXamarin.cs" />
     <Compile Include="Extension\PanelMove.cs" />
@@ -112,10 +117,13 @@
     <Compile Include="Extension\TopLeftContainerDragHandleXamarin.cs" />
     <Compile Include="Extension\TopLeftContainerDragHandleMultipleItemsXamarin.cs" />
     <Compile Include="Helper\TransparentBrush.cs" />
+    <Compile Include="Pages\MultiPage.cs" />
+    <Compile Include="Pages\TabbedPageView.cs" />
+    <Compile Include="Pages\TabbedPage.cs" />
     <Compile Include="Pages\ContentPageView.xaml.cs">
       <DependentUpon>ContentPageView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Page .cs" />
+    <Compile Include="Pages\Page.cs" />
     <Compile Include="Pages\ContentPage.cs" />
     <Compile Include="Base\Views\Label.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

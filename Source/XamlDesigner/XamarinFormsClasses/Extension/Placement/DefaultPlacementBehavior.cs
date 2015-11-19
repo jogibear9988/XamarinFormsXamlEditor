@@ -114,7 +114,7 @@ namespace Xamarin.Forms.Extension.Placement
 		{
 			var canEnter = internalCanEnterContainer(operation);
 			
-			if (canEnter && !shouldAlwaysEnter && !Keyboard.IsKeyDown(Key.LeftAlt) && !Keyboard.IsKeyDown(Key.RightAlt))
+			if (canEnter && !shouldAlwaysEnter && !System.Windows.Input.Keyboard.IsKeyDown(Key.LeftAlt) && !System.Windows.Input.Keyboard.IsKeyDown(Key.RightAlt))
 			{
 				var b = new Rect(0, 0, ((FrameworkElement)this.ExtendedItem.View).ActualWidth, ((FrameworkElement)this.ExtendedItem.View).ActualHeight);
 				InfoTextEnterArea.Start(ref infoTextEnterArea, this.Services, this.ExtendedItem.View, b, Translations.Instance.PressAltText);
